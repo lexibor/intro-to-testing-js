@@ -30,4 +30,22 @@ describe('sayHello', function() {
     it('should return "Hello, Pat" when executed', function(){
         expect(sayHello('Pat')).toBe("Hello, Pat!");
     });
+    it('should return "Hello, World" when executed with nothing', function(){
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return "Hello, World" when executed with true', function(){
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return "Hello, World" when executed with false', function(){
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('should return "Hello, null" when executed with null', function(){
+        expect(sayHello(null)).toBe("Hello, null!");
+    });
+    it('should return "Hello, !" when executed with a blank string', function(){
+        expect(sayHello('')).toBe("Hello, !");
+    });
+    it('should return "Hello, array!" when executed with an array', function(){
+        expect(sayHello(['a', 2, 8])).toBe("Hello, array!");
+    });
 });
