@@ -43,8 +43,15 @@ function isEven(num)
     return num % 2 == 0;
 }
 
-// function isVowel(char)
-// {
-//
-//     if()
-// }
+function isVowel(char)
+{
+    if(typeof char == 'string')
+    {
+        char = char.toLowerCase();
+    }
+    if(char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u')
+    {
+        return true;
+    }
+    return false;
+}
